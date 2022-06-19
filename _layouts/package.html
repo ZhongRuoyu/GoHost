@@ -1,0 +1,17 @@
+{%- assign site_base = site.url | split: "://" | shift | join: "://" -%}
+{%- assign root_path = site_base | append: page.permalink -%}
+{%- assign vcs = page.vcs -%}
+{%- assign repo_url = page.repo_url -%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="go-import" content="{{ root_path }} {{ vcs }} {{ repo_url }}">
+    <meta http-equiv="refresh" content="0; url=https://pkg.go.dev/{{ root_path }}">
+</head>
+
+<body>
+    Nothing to see here. Please <a href="https://pkg.go.dev/{{ root_path }}">move along</a>.
+</body>
+
+</html>

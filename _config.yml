@@ -1,0 +1,12 @@
+url: https://example.org
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: package
+
+liquid:
+  error_mode: strict
+  strict_variables: true
+  strict_filters: true
